@@ -118,7 +118,7 @@
                 <button type="submit" class="btn btn-primary">Filter</button>
             </form>
         </div>
-        @if($events->isEmpty())
+        @if($event->isEmpty())
             <p class="text-center text-muted">Tidak ada event yang cocok dengan filter ini.</p>
         @else
             <div class="table-responsive">
@@ -134,7 +134,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($events as $event)
+                        @foreach ($event as $event)
                             <tr>
                                 <td>
                                     <a href="{{ route('event.detail', ['nama_event' => $event->nama_event]) }}" class="text-decoration-none text-dark">

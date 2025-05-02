@@ -26,10 +26,10 @@ class HomeController extends Controller
             $query->where('rating', '>', 7);
         }
     
-        $events = $query->get();
+        $event = $query->get();
         $username = Auth::user()->username;
-    
-        return view('user.pages.home.index', compact('events', 'username', 'minat'));
+
+        return view('user.pages.home.index', compact('event', 'username', 'minat'));
     }
 }
 
